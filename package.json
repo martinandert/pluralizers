@@ -23,18 +23,12 @@
     "email": "mandert@gmail.com"
   },
   "license": "MIT",
-  "scripts": {
-    "test": "make test"
-  },
   "bugs": {
     "url": "https://github.com/martinandert/pluralizers/issues"
   },
   "homepage": "https://github.com/martinandert/pluralizers",
-  "dependencies": {},
   "devDependencies": {
-    "semver": "~2.2.1",
-    "node-dev": "~2.1.6",
-    "mocha": "~1.17.1",
-    "jshint": "~2.4.3"
+    "jshint": "^2.5.10",
+    "mocha": "^2.0.1"
   }
 }
