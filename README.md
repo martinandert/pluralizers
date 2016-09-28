@@ -34,7 +34,7 @@ You can fetch a different localization by requiring a specific locale:
 var pluralize = require('pluralizers/de');
 ```
 
-English ([en](en.js)), German ([de](de.js)) and Brazilian Portuguese ([pt-br](pt-br.js)) are currently the only supported locales. Pull requests welcome.
+English ([en](en.js)), German ([de](de.js)), Brazilian Portuguese ([pt-br](pt-br.js)) and Russian ([ru](ru.js)) are currently the only supported locales. Pull requests welcome.
 
 
 ## Contributing
