@@ -1,6 +1,6 @@
 {
   "name": "pluralizers",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Repository of localized pluralization functions",
   "main": "index.js",
   "repository": {
