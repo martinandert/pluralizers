@@ -4,6 +4,7 @@ testEn();
 testDe();
 testPtBr();
 testRu();
+testEs();
 
 function testEn() {
   describe('the pluralizer for the "en" locale', function() {
@@ -89,6 +90,25 @@ function testRu() {
 
       assert.equal(pluralize(entry, 3.14), '%(count)s items');
       assert.equal(pluralize(entry, 2.78), '%(count)s items');
+    });
+  });
+}
+
+function testEs() {
+  describe('the pluralizer for the "es" locale', function() {
+    var pluralize = require('./es');
+
+    it('should be a function', function() {
+      assert.isFunction(pluralize);
+    });
+
+    it('should output the correct pluralizations', function() {
+      var entry = { zero: 'No hay elementos', one: 'Un elemento', other: '%(count)s elementos' };
+
+      assert.equal(pluralize(entry, 0),   'No hay elementos');
+      assert.equal(pluralize(entry, 1),   'Un elemento');
+      assert.equal(pluralize(entry, 2),   '%(count)s elementos');
+      assert.equal(pluralize(entry, 42),  '%(count)s elementos');
     });
   });
 }
