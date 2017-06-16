@@ -5,6 +5,8 @@ testDe();
 testPtBr();
 testRu();
 testEs();
+testCs();
+testSk();
 
 function testEn() {
   describe('the pluralizer for the "en" locale', function() {
@@ -109,6 +111,46 @@ function testEs() {
       assert.equal(pluralize(entry, 1),   'Un elemento');
       assert.equal(pluralize(entry, 2),   '%(count)s elementos');
       assert.equal(pluralize(entry, 42),  '%(count)s elementos');
+    });
+  });
+}
+
+
+function testCs() {
+  describe('the pluralizer for the "cs" locale', function () {
+    var pluralize = require('./cs');
+
+    it('should be a function', function () {
+      assert.isFunction(pluralize);
+    });
+
+    it('should output the correct pluralizations', function () {
+      var entry = { zero: 'žádná položka', one: 'jedna položka', few: '%(count)s položky', other: '%(count)s položek' };
+
+      assert.equal(pluralize(entry, 0),   'žádná položka');
+      assert.equal(pluralize(entry, 1),   'jedna položka');
+      assert.equal(pluralize(entry, 2),   '%(count)s položky');
+      assert.equal(pluralize(entry, 5),   '%(count)s položek');
+    });
+  });
+}
+
+
+function testSk() {
+  describe('the pluralizer for the "sk" locale', function () {
+    var pluralize = require('./sk');
+
+    it('should be a function', function () {
+      assert.isFunction(pluralize);
+    });
+
+    it('should output the correct pluralizations', function () {
+      var entry = { zero: 'žiadna položka', one: 'jedna položka', few: '%(count)s položky', other: '%(count)s položiek' };
+
+      assert.equal(pluralize(entry, 0),   'žiadna položka');
+      assert.equal(pluralize(entry, 1),   'jedna položka');
+      assert.equal(pluralize(entry, 2),   '%(count)s položky');
+      assert.equal(pluralize(entry, 5),   '%(count)s položiek');
     });
   });
 }
